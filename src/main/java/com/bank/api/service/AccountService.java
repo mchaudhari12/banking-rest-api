@@ -50,7 +50,7 @@ public class AccountService {
         accountRepository.deleteById(id);
     }
 
-    public List<Account> getAccount(Long id){
+    public List<Account> getAccount(){
         return accountRepository.findAll();
     }
     

@@ -52,8 +52,8 @@ public class AccountController {
         return ResponseEntity.ok("Account Deleted");
    }
 
-   @GetMapping("/{id}/list")
-   public ResponseEntity<List<Account>> allAccount(@PathVariable Long id){
-    return ResponseEntity.ok(accountService.getAccount(id));
+   @GetMapping("account/list")
+   public ResponseEntity<List<Account>> allAccount(){
+    return ResponseEntity.ok(accountService.getAccount());
    }
 }
