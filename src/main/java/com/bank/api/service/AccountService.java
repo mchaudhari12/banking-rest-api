@@ -1,5 +1,7 @@
 package com.bank.api.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +20,10 @@ public class AccountService {
     @Autowired
     private AccountRepository accountRepository;
 
+    public Account account(Long id){
+        return accountRepository.findById(id).orElseThrow(() -> new RuntimeException("Account Not Found"));
+    }
+
     @Transactional
     public void transferFunds(TransferRequest request) {
 
@@ -35,6 +41,17 @@ public class AccountService {
      
              accountRepository.save(from);
              accountRepository.save(to);
+    }
+
+    public void deleteAccount(Long id){
+        if(!accountRepository.existsById(id)){
+            throw new RuntimeException("Account Not Found");
+        }
+        accountRepository.deleteById(id);
+    }
+
+    public List<Account> getAccount(Long id){
+        return accountRepository.findAll();
     }
     
 }
