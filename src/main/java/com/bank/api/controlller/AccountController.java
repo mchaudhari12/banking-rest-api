@@ -12,7 +12,6 @@ import com.bank.api.dto.TransferRequest;
 import com.bank.api.entity.Account;
 import com.bank.api.repository.AccountRepository;
 import com.bank.api.service.AccountService;
-
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,6 +25,7 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
 
+   
     @Autowired
     private AccountRepository accountRepository;
 

@@ -1,11 +1,8 @@
 package com.bank.api.service;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-
 import com.bank.api.dto.TransferRequest;
 import com.bank.api.entity.Account;
 import com.bank.api.exception.InsufficientFundsException;
@@ -53,5 +50,6 @@ public class AccountService {
     public List<Account> getAccount(){
         return accountRepository.findAll();
     }
+    
     
 }

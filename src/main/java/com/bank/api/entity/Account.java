@@ -13,6 +13,7 @@ public class Account {
     private Long id;
 
     private String accountHolderName;
+    private String accountNumber;
     private String accountType;
     private double balance;
 
@@ -50,7 +51,13 @@ public class Account {
     public void setBalance(double balance) {
         this.balance = balance;
     }
+    public String getAccountNumber() {
+        return accountNumber;
+    }
 
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
     
 
 }
